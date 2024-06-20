@@ -12,17 +12,6 @@ resource "google_compute_subnetwork" "manning-sub" {
   private_ip_google_access = true
 }
 
-# resource "google_compute_firewall" "allow_ssh" {
-#   name          = "allowssh"
-#   network       = google_compute_network.vpc_network.self_link
-
-#   allow {
-#     protocol = "tcp"
-#     ports    = ["22"]
-#   }
-
-#   source_ranges = ["0.0.0.0/0"]
-# }
 
 resource "google_compute_firewall" "default" {
   name    = "nrules"
